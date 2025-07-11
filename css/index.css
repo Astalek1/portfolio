@@ -471,7 +471,7 @@ nav li a:hover{
   margin: 0 auto;
   max-width: 800px;
   margin-top:15px;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
 /***************projets*************/
@@ -497,27 +497,32 @@ nav li a:hover{
   height: 400px;
   display: flex;
   flex-direction: column;
+ 
 }
 
 .projet-article img {
-  height: 90%;
+  height: 80%;
   width: 100%;
-  object-fit: cover;
+  object-fit:fill;
   display: block;
 }
 
 .projet-txt {
-  height: 40%;
+  height: 20%;
   background: white;
   padding: 15px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   color: black;
-  text-decoration: none;
 }
 
 .projet-txt p {
   margin: 0;
   font-size:18px;
+}
+
+.projet-article a {
+  text-decoration: none;
+  color: inherit;
 }
