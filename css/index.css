@@ -476,10 +476,29 @@ nav li a:hover{
 
 /***************projets*************/
 
-.projet-liste {
+.projets {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.projets_img-fond {
+  
+  background-image: url('../images/fond.webp'); /* chemin à adapter si besoin */
+  background-repeat: repeat-y;
+  z-index: 0;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+ background-size: contain;
+
+}
+
+.projets-liste {
+  position:relative;
   width: 100%;
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 40px;
@@ -487,7 +506,8 @@ nav li a:hover{
   box-sizing: border-box;
 }
 
-.projet-article {
+.projets-article {
+
   background: white;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -497,17 +517,17 @@ nav li a:hover{
   height: 400px;
   display: flex;
   flex-direction: column;
- 
+  z-index: 3;
 }
 
-.projet-article img {
+.projets-article img {
   height: 80%;
   width: 100%;
   object-fit:fill;
   display: block;
 }
 
-.projet-txt {
+.projets-txt {
   height: 20%;
   background: white;
   padding: 15px;
@@ -517,12 +537,12 @@ nav li a:hover{
   color: black;
 }
 
-.projet-txt p {
+.projets-txt p {
   margin: 0;
   font-size:18px;
 }
 
-.projet-article a {
+.projets-article a {
   text-decoration: none;
   color: inherit;
 }
