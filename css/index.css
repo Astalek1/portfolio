@@ -601,3 +601,33 @@ nav li a:hover{
   height:100px;
   object-fit: contain;
 }
+
+/***************** contact *****************/
+.contact{
+  background-color: black;
+  color:white;
+  height: 250px;
+}
+
+.contact_titre{
+  display:flex;
+  align-items: center;
+  justify-content: center;
+  height:100px;
+}
+
+.contact_txt{
+  font-size:32px;
+  margin-left:1%;
+   display: flex;
+  flex-direction: column;
+  gap: 20px; /* espace entre les lignes */
+}
+
+.contact_txt div{
+   display: flex;
+  align-items: center;
+  gap: 12px; /* espace entre l’icône et le texte */
+}
+
+
