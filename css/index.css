@@ -494,7 +494,7 @@ nav li a:hover{
   background-position:center bottom;
 }
 
-.projets-liste {
+.projets_liste {
   position:relative;
   width: 100%;
   max-width: 1200px;
@@ -506,42 +506,98 @@ nav li a:hover{
   box-sizing: border-box;
 }
 
-.projets-article {
+.projets_article {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   text-decoration: none;
   color: inherit;
   overflow: hidden;
-  height: 400px;
+  height: 380px;
   display: flex;
   flex-direction: column;
   z-index: 3;
+  padding: 10px; /* marge intérieure */
+  background-color:wheat;
 }
 
-.projets-article img {
-  height: 80%;
-  width:100%;
-  object-fit:fill;
+
+.projets_article img {
+  height: 240px; /* fixe pour toutes les images */
+  width: 100%;
+  object-fit: cover;
   display: block;
+  border-top-left-radius:5% ;
+  border-top-right-radius:5% ;
 }
 
-.projets-txt {
-  height: 20%;
+.projets_txt {
+  flex-grow: 1;
+  margin-top: 20px;
   background: white;
-  padding: 15px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  gap: 10px;
   color: black;
+  height:110px;
+  background-color:wheat;
 }
 
-.projets-txt p {
+.projets_txt p {
   margin: 0;
   font-size:18px;
 }
 
-.projets-article a {
+.projets_article a {
   text-decoration: none;
   color: inherit;
+}
+
+/***************** compétences ********************/
+
+.compétences {
+  position: relative;
+  overflow: hidden;
+  justify-content: center;
+  gap: 40px;
+ 
+}
+
+.compétences_container{
+   display: flex;
+  padding: 60px 80px; 
+  gap:60px;
+   justify-content: center; 
+}
+
+.compétences_articles {
+  width: 300px;
+  background-color: #f7f7f7;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: wheat;
+}
+
+.compétences_articles h3 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.compétences_logos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:5px;
+}
+
+.compétences_logos-img img{
+  width:100%;
+  height:100px;
+  object-fit: contain;
 }
