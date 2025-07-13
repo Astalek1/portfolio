@@ -349,10 +349,25 @@ template {
 }
 
 /*************Général*****************/
+html {
+  scroll-behavior: smooth;
+}
 
 *{
   margin: 0;
   padding:0;
+}
+
+h1{
+ font-family: "DM Serif Display", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+ h2, h3, h4{
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-style: normal;
 }
 
 h2{
@@ -360,25 +375,41 @@ h2{
 }
 
 h3{
-  font-size: 2rem;
+  font-size: 28px;
+  font-weight:600 ;
+ 
+}
+
+a, p, .contact_txt{
+ font-family: "Open Sans", sans-serif;
+  font-style: normal;
+  font-variation-settings:"wdth" 100;
+  font-size: 22px;
+ 
+
 }
 
 p{
-  font-size: 22px;
+  font-size: 20px;
 }
 
-
-
 .titre{
+  display:flex;
+  justify-content: center;
+  align-items: center;
   background-color: black;
   color:white;
   text-align: center;
-  height:130px;
+  height:160px;
 }
 
-.titre h2{
-  padding-top:2%;
+.projets_txt p{
+  font-size: 18px !important;
+  font-weight: 400;
 }
+
+
+
 /************navigation**************/
 
 nav {
@@ -386,7 +417,6 @@ nav {
   align-items: center;
   padding: 10px 20px;
   background-color: black;
-  border-bottom: 1px solid black;
 }
 
 nav img {
@@ -509,7 +539,6 @@ nav li a:hover{
 .projets_article {
   background: white;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
   text-decoration: none;
   color: inherit;
   overflow: hidden;
@@ -517,8 +546,9 @@ nav li a:hover{
   display: flex;
   flex-direction: column;
   z-index: 3;
-  padding: 10px; /* marge intérieure */
+  padding: 15px; 
   background-color:wheat;
+  border:1px solid black;
 }
 
 
@@ -527,8 +557,8 @@ nav li a:hover{
   width: 100%;
   object-fit: cover;
   display: block;
-  border-top-left-radius:5% ;
-  border-top-right-radius:5% ;
+  border-radius:10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 .projets_txt {
@@ -565,23 +595,23 @@ nav li a:hover{
 }
 
 .compétences_container{
-   display: flex;
+  display: flex;
   padding: 60px 80px; 
   gap:60px;
-   justify-content: center; 
+  justify-content: center; 
 }
 
 .compétences_articles {
   width: 300px;
   background-color: #f7f7f7;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
   padding: 20px;
   box-sizing: border-box;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: wheat;
+  background-color: wheat;  
 }
 
 .compétences_articles h3 {
@@ -593,7 +623,8 @@ nav li a:hover{
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap:5px;
+  gap:10px;
+ 
 }
 
 .compétences_logos-img img{
