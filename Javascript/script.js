@@ -1,8 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
-  setHover();
-  setScroll();
-  setZoom();
-});
+
 
 // Gère le survol des liens du menu
 function setHover() {
@@ -59,3 +55,10 @@ function setZoom() {
     });
   });
 }
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  setHover();
+  setScroll();
+  setZoom();
+});
