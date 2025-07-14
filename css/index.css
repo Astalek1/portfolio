@@ -286,6 +286,13 @@ nav li a:hover {
   margin-bottom: 0;
   padding-top: 120px;
 }
+.intro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
+}
 .intro_img {
   position: absolute;
   width: 100%;
@@ -294,7 +301,6 @@ nav li a:hover {
      object-fit: cover;
   z-index: 1;
   opacity: 1;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 .intro_img-profile {
   position: relative;
