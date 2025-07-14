@@ -313,14 +313,6 @@ nav {
     opacity: 1;
   }
 
-    &_overlay {
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.6); // filtre sombre
-    z-index: 1;
-  }
-
-
   &_img-profile {
     position: relative;
     z-index: 2;
@@ -332,6 +324,7 @@ nav {
     position: relative;
     z-index: 3;
     color: $primary-color;
+    background-color: rgba(0, 0, 0, 0.1); 
     margin-left: 12%;
     bottom: 92%;
      text-shadow:
