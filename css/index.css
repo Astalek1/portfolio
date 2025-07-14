@@ -294,7 +294,7 @@ nav li a:hover {
      object-fit: cover;
   z-index: 1;
   opacity: 1;
-  filter: brightness(60%);
+  filter: brightness(50%);
 }
 .intro_img-profile {
   position: relative;
