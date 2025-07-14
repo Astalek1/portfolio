@@ -313,22 +313,30 @@ nav {
     opacity: 1;
   }
 
-  &_img-profile {
+    &_content {
+    width: 50%;
+    margin-left:1%;
     position: relative;
     z-index: 2;
-    height: 70%;
-    margin: 1%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &_img-profile {
+    width: clamp(80px, 20vw, 200px);
+    height: auto;
+    margin-top:1%;
+    
   }
 
   h1, h2 {
     position: relative;
     z-index: 3;
     color: $primary-color;
-    
     background-color: rgba(0,0,0,0.1);
-  /* ajoute cette ligne en plus : */
     background-color: rgba(0,0,0,0.1), #000; // #000 comme fallback
-    margin-left: 12%;
+
     bottom: 92%;
      text-shadow:
     -1px -1px 0 black,

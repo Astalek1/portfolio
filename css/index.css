@@ -295,20 +295,26 @@ nav li a:hover {
   z-index: 1;
   opacity: 1;
 }
-.intro_img-profile {
+.intro_content {
+  width: 50%;
+  margin-left: 1%;
   position: relative;
   z-index: 2;
-  height: 70%;
-  margin: 1%;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.intro_img-profile {
+  width: clamp(80px, 20vw, 200px);
+  height: auto;
+  margin-top: 1%;
 }
 .intro h1, .intro h2 {
   position: relative;
   z-index: 3;
   color: white;
   background-color: rgba(0, 0, 0, 0.1);
-  /* ajoute cette ligne en plus : */
   background-color: rgba(0, 0, 0, 0.1), #000;
-  margin-left: 12%;
   bottom: 92%;
   text-shadow: -1px -1px 0 black, 0 -1px 0 black, 1px -1px 0 black, -1px 0 0 black, 1px 0 0 black, -1px 1px 0 black, 0 1px 0 black, 1px 1px 0 black;
 }
