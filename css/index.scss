@@ -186,9 +186,7 @@ $cards-color: wheat;
 
 /*************Général*****************/
 
-html {
-  scroll-behavior: smooth;
-}
+
 
 * {
   margin: 0;
@@ -246,10 +244,18 @@ p {
 
 /************navigation**************/
 
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
 nav {
   display: flex;
   align-items: center;
-  padding: 10px 20px;
+  padding: 10px;
   background-color: $secondary-color;
 
   img {
@@ -262,17 +268,26 @@ nav {
     margin-left: auto;
     padding: 0 5%;
     font-size: 20px;
-    gap: 30px;
+    gap: 20px;
   }
 
   li {
     a {
-      text-decoration: none;
-      color: $primary-color;
-      font-weight: bold;
+       display: inline-block; // 👈 nécessaire pour que transform fonctionne proprement
+        text-decoration: none;
+        color: $primary-color;
+        font-weight: bold;
+        padding: 6px 12px;
+        border-radius: 6px;
+        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+
 
       &:hover {
-        border-bottom: 2px solid;
+        background-color: $primary-color;
+        color: $secondary-color;
+        transform: scale(1.1);
+        padding: 6px 12px;
+        border-radius: 6px;
       }
     }
   }
@@ -286,6 +301,7 @@ nav {
   height: 25vh;
   overflow: hidden;
   margin-bottom: 0;
+  padding-top: 120px;
 
   &_img {
     position: absolute;
@@ -379,6 +395,7 @@ nav {
     padding: 15px;
     background-color: $cards-color;
     border: 1px solid black;
+    
 
     img {
       height: 240px;
