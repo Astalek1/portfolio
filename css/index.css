@@ -305,7 +305,9 @@ nav li a:hover {
   position: relative;
   z-index: 3;
   color: white;
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.1);
+  /* ajoute cette ligne en plus : */
+  background-color: rgba(0, 0, 0, 0.1), #000;
   margin-left: 12%;
   bottom: 92%;
   text-shadow: -1px -1px 0 black, 0 -1px 0 black, 1px -1px 0 black, -1px 0 0 black, 1px 0 0 black, -1px 1px 0 black, 0 1px 0 black, 1px 1px 0 black;
