@@ -298,7 +298,7 @@ nav li a:hover {
 .intro_overlay {
   position: absolute;
   inset: 0;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.6);
   z-index: 1;
 }
 .intro_img-profile {
