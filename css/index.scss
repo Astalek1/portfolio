@@ -303,6 +303,7 @@ nav {
   margin-bottom: 0;
   padding-top: 120px;
 
+
   &_img {
     position: absolute;
     width: 100%;
@@ -310,8 +311,15 @@ nav {
     object-fit: cover;
     z-index: 1;
     opacity: 1;
-    filter: brightness(50%); // Assombrit l’image de fond propremen
   }
+
+    &_overlay {
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.3); // filtre sombre
+    z-index: 1;
+  }
+
 
   &_img-profile {
     position: relative;

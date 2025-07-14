@@ -294,7 +294,12 @@ nav li a:hover {
      object-fit: cover;
   z-index: 1;
   opacity: 1;
-  filter: brightness(50%);
+}
+.intro_overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 1;
 }
 .intro_img-profile {
   position: relative;
