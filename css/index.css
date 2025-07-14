@@ -307,11 +307,15 @@ nav li a:hover {
   color: white;
   margin-left: 12%;
   bottom: 92%;
-  color: white;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.7);
-  background-color: rgba(0, 0, 0, 0.4);
-  padding: 6px 12px;
+}
+.intro h1::before, .intro h2::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
   border-radius: 8px;
+  z-index: -1;
+  filter: blur(2px);
 }
 .intro h1 {
   font-size: 5rem;
