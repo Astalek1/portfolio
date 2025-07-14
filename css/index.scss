@@ -191,8 +191,7 @@ $cards-color: wheat;
 * {
   margin: 0;
   padding: 0;
-  position: relative;
-    z-index: 2;
+  
 }
 
 h1 {
@@ -304,16 +303,6 @@ nav {
   margin-bottom: 0;
   padding-top: 120px;
 
-
-  &::before {
-   content: "";
-   position: absolute;
-   inset: 0; // équivalent à top/right/bottom/left: 0
-   background-color: rgba(0, 0, 0, 0.30);
-   z-index: 1;
-  }
-
-
   &_img {
     position: absolute;
     width: 100%;
@@ -321,6 +310,7 @@ nav {
     object-fit: cover;
     z-index: 1;
     opacity: 1;
+    filter: brightness(70%); // Assombrit l’image de fond propremen
   }
 
   &_img-profile {
