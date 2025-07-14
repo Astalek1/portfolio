@@ -294,6 +294,7 @@ nav li a:hover {
      object-fit: cover;
   z-index: 1;
   opacity: 1;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .intro_img-profile {
   position: relative;
@@ -308,7 +309,6 @@ nav li a:hover {
   margin-left: 12%;
   bottom: 92%;
   text-shadow: -1px -1px 0 black, 0 -1px 0 black, 1px -1px 0 black, -1px 0 0 black, 1px 0 0 black, -1px 1px 0 black, 0 1px 0 black, 1px 1px 0 black;
-  background-color: rgba(0, 0, 0, 0.3);
 }
 .intro h1 {
   font-size: 5rem;
@@ -376,6 +376,7 @@ nav li a:hover {
   display: block;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 .projets_article a {
   text-decoration: none;
