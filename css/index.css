@@ -298,13 +298,14 @@ nav li a:hover {
   opacity: 1;
 }
 .intro_content {
-  width: 50%;
+  width: 90%;
   margin-left: 1%;
   position: relative;
   z-index: 2;
   display: flex;
   align-items: center;
   gap: 1rem;
+  border: 1px solid red;
 }
 .intro_img-profile {
   width: clamp(80px, 20vw, 200px);
@@ -472,4 +473,121 @@ nav li a:hover {
   display: flex;
   align-items: center;
   gap: 12px;
+}
+
+/****************responsive*******************/
+@media (max-width: 1024px) {
+  .intro_content {
+    width: 70%;
+    flex-direction: row;
+    align-items: center;
+    gap: 1rem;
+  }
+  .intro_img-profile {
+    width: clamp(80px, 18vw, 130px);
+  }
+  .intro h1 {
+    font-size: 3rem;
+  }
+  .intro h2 {
+    font-size: 2rem;
+  }
+  .projets_liste {
+    padding: 20px;
+    gap: 10px;
+  }
+  .projets_liste_article {
+    height: auto;
+  }
+  .projets_img-fond {
+    background-size: contain;
+  }
+  .projets_txt {
+    height: 90px;
+  }
+  .projets_txt p {
+    font-size: 16px;
+  }
+  .compétences_container {
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .compétences_articles {
+    width: 200px;
+    padding: 15px;
+  }
+  .compétences_articles h3 {
+    font-size: 22px;
+  }
+  .compétences_articles .compétences_logos-img img {
+    height: 70px;
+  }
+}
+@media (max-width: 768px) {
+  header {
+    display: none;
+  }
+  .intro_content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    margin-left: 0;
+  }
+  .intro_img-profile {
+    width: 130px;
+    height: auto;
+    margin-top: 10px;
+  }
+  .intro h1 {
+    font-size: 2.2rem;
+    margin-top: 10px;
+  }
+  .intro h2 {
+    font-size: 1.4rem;
+    margin-top: 5px;
+  }
+  .titre {
+    justify-content: center;
+    text-align: center;
+  }
+  .projets_liste {
+    grid-template-columns: 1fr;
+    padding: 20px;
+    position: relative;
+    z-index: 1;
+  }
+  .projets_article {
+    height: auto;
+    padding: 10px;
+    background-color: wheat;
+  }
+  .projets_img-fond {
+    background-size: contain;
+  }
+  .projets_txt {
+    margin-top: 10px;
+  }
+  .projets_txt p {
+    font-size: 16px;
+  }
+  .compétences {
+    background-color: rgb(235, 235, 235);
+  }
+  .compétences_container {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+  .compétences_articles {
+    width: 80%;
+    border: 2px solid transparent;
+    transition: border-color 0.3s ease;
+  }
+  .contact_txt {
+    align-items: center;
+    text-align: center;
+    font-size: 22px;
+  }
 }/*# sourceMappingURL=index.css.map */

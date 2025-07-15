@@ -44,8 +44,12 @@ function setZoom() {
 
   cards.forEach(card => {
     card.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 768 ){
       card.style.transform = 'scale(1.08)';
       card.style.transition = 'transform 0.3s ease';
+      } else {
+         card.style.transform = 'none';
+      }
      
     });
 
