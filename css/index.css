@@ -305,7 +305,6 @@ nav li a:hover {
   display: flex;
   align-items: center;
   gap: 1rem;
-  border: 1px solid red;
 }
 .intro_img-profile {
   width: clamp(80px, 20vw, 200px);
