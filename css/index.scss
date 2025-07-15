@@ -335,7 +335,7 @@ nav {
     z-index: 3;
     color: $primary-color;
     background-color: rgba(0,0,0,0.1);
-    background-color: rgba(0,0,0,0.1), #000; // #000 comme fallback
+    background: rgba(0,0,0,0.1);
 
     bottom: 92%;
      text-shadow:
