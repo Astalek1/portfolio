@@ -240,6 +240,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  height: auto;
   z-index: 1000;
 }
 
@@ -250,6 +251,7 @@ nav {
   background-color: black;
 }
 nav img {
+  width: 115px;
   height: 100px;
 }
 nav ul {

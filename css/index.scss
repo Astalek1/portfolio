@@ -250,6 +250,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
+  height:auto;
   z-index: 1000;
 }
 
@@ -260,6 +261,7 @@ nav {
   background-color: $secondary-color;
 
   img {
+    width: 115px;
     height: 100px;
   }
 
@@ -327,7 +329,6 @@ nav {
     width: clamp(80px, 20vw, 200px);
     height: auto;
     margin-top:1%;
-    
   }
 
   h1, h2 {
