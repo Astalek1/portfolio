@@ -186,8 +186,6 @@ $cards-color: wheat;
 
 /*************Général*****************/
 
-
-
 * {
   margin: 0;
   padding: 0;
@@ -234,6 +232,8 @@ p {
   color: $primary-color;
   text-align: center;
   height: 160px;
+  flex-direction: column; 
+  gap:10px;
 }
 
 .projets_txt {
@@ -259,6 +259,7 @@ nav {
   align-items: center;
   padding: 10px;
   background-color: $secondary-color;
+  
 
   img {
     width: 115px;
@@ -272,6 +273,7 @@ nav {
     padding: 0 5%;
     font-size: 20px;
     gap: 20px;
+   
   }
 
   li {
@@ -596,9 +598,32 @@ nav {
 }
 
 @media (max-width: 768px) {
-  header {
-    display: none;
+
+  nav{
+  ul {
+    width: 55%;
+    margin: 0;
+    padding: 0;
+    gap: 0;
+    margin-left: auto;
+    display: flex;
+    flex-wrap: wrap; // permet de revenir à la ligne si besoin
+    
   }
+
+  li{
+      flex: 1 1 auto; // permet à chaque item de s'adapter
+      min-width: 0;
+   }
+   
+  a{
+    font-size: clamp(10px, 3vw, 14px); //  taille ajustée
+    
+    text-align: center;
+    word-wrap: break-word;
+  }
+
+}
 
   .intro {
     &_content {
