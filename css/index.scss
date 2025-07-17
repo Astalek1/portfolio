@@ -189,7 +189,7 @@ $cards-color: wheat;
 * {
   margin: 0;
   padding: 0;
-  
+
 }
 
 h1 {
@@ -198,7 +198,9 @@ h1 {
   font-style: normal;
 }
 
-h2, h3, h4 {
+h2,
+h3,
+h4 {
   font-family: 'Montserrat', sans-serif;
   font-weight: 500;
   font-style: normal;
@@ -213,7 +215,9 @@ h3 {
   font-weight: 600;
 }
 
-a, p, .contact_txt {
+a,
+p,
+.contact_txt {
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-variation-settings: "wdth" 100;
@@ -232,8 +236,8 @@ p {
   color: $primary-color;
   text-align: center;
   height: 160px;
-  flex-direction: column; 
-  gap:10px;
+  flex-direction: column;
+  gap: 10px;
 }
 
 .projets_txt {
@@ -250,7 +254,7 @@ header {
   top: 0;
   left: 0;
   width: 100%;
-  height:auto;
+  height: auto;
   z-index: 1000;
 }
 
@@ -259,7 +263,7 @@ nav {
   align-items: center;
   padding: 10px;
   background-color: $secondary-color;
-  
+
 
   img {
     width: 115px;
@@ -273,18 +277,18 @@ nav {
     padding: 0 5%;
     font-size: 20px;
     gap: 20px;
-   
+
   }
 
   li {
     a {
-       display: inline-block; // 👈 nécessaire pour que transform fonctionne proprement
-        text-decoration: none;
-        color: $primary-color;
-        font-weight: bold;
-        padding: 6px 12px;
-        border-radius: 6px;
-        transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+      display: inline-block; // 👈 nécessaire pour que transform fonctionne proprement
+      text-decoration: none;
+      color: $primary-color;
+      font-weight: bold;
+      padding: 6px 12px;
+      border-radius: 6px;
+      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
 
 
       &:hover {
@@ -317,40 +321,41 @@ nav {
     opacity: 1;
   }
 
-    &_content {
+  &_content {
     width: 90%;
-    margin-left:1%;
+    margin-left: 1%;
     position: relative;
     z-index: 2;
     display: flex;
     align-items: center;
     gap: 1rem;
-   
+
   }
 
   &_img-profile {
     width: clamp(80px, 20vw, 200px);
     height: auto;
-    margin-top:1%;
+    margin-top: 1%;
   }
 
-  h1, h2 {
+  h1,
+  h2 {
     position: relative;
     z-index: 3;
     color: $primary-color;
-    background-color: rgba(0,0,0,0.1);
-    background: rgba(0,0,0,0.1);
+    background-color: rgba(0, 0, 0, 0.1);
+    background: rgba(0, 0, 0, 0.1);
 
     bottom: 92%;
-     text-shadow:
-    -1px -1px 0 black,
-     0   -1px 0 black,
-     1px -1px 0 black,
-    -1px  0   0 black,
-     1px  0   0 black,
-    -1px  1px 0 black,
-     0    1px 0 black,
-     1px  1px 0 black;
+    text-shadow:
+      -1px -1px 0 black,
+      0 -1px 0 black,
+      1px -1px 0 black,
+      -1px 0 0 black,
+      1px 0 0 black,
+      -1px 1px 0 black,
+      0 1px 0 black,
+      1px 1px 0 black;
   }
 
   h1 {
@@ -416,7 +421,11 @@ nav {
     padding: 15px;
     background-color: $cards-color;
     border: 1px solid black;
-    
+
+    &:hover{
+      cursor:pointer;
+    }
+
 
     img {
       height: 240px;
@@ -425,7 +434,7 @@ nav {
       display: block;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      background-color: rgba(0, 0, 0, 0.30); 
+      background-color: rgba(0, 0, 0, 0.30);
     }
 
     a {
@@ -451,6 +460,92 @@ nav {
     }
   }
 }
+
+/***************** modal****************************/
+.modal {
+  display: none; // par défaut masquée
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+
+  &.active {
+    display: flex;
+  }
+
+  &_content {
+    background-color: white;
+    padding: 30px;
+    border-radius: 12px;
+    max-width: 800px;
+    width: 90%;
+    overflow-y: auto; // si le contenu déborde
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    position: relative;
+  }
+
+  &_description {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  &_problem-list {
+    margin-bottom: 20px;
+    padding-left: 20px;
+
+    li {
+      margin-bottom: 8px;
+      list-style: disc;
+    }
+  }
+
+  &_skills {
+    font-weight: normal;
+  }
+
+  &_buttons {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+
+    a {
+      padding: 10px 20px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: bold;
+      background-color: black;
+      color: white;
+      transition: background-color 0.3s;
+
+      &:hover {
+        background-color: grey;
+      }
+    }
+  }
+
+  &_close {
+    background: none;
+    border: 2px solid black;
+    padding: 8px 14px;
+    font-weight: bold;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 18px;
+
+    &:hover {
+      background-color: black;
+      color: white;
+    }
+  }
+}
+
 
 /***************** compétences ********************/
 
@@ -561,8 +656,9 @@ nav {
         height: auto;
       }
     }
-      &_img-fond {  
-      background-size:contain;
+
+    &_img-fond {
+      background-size: contain;
     }
 
 
@@ -599,31 +695,31 @@ nav {
 
 @media (max-width: 768px) {
 
-  nav{
-  ul {
-    width: 55%;
-    margin: 0;
-    padding: 0;
-    gap: 0;
-    margin-left: auto;
-    display: flex;
-    flex-wrap: wrap; // permet de revenir à la ligne si besoin
-    
-  }
+  nav {
+    ul {
+      width: 55%;
+      margin: 0;
+      padding: 0;
+      gap: 0;
+      margin-left: auto;
+      display: flex;
+      flex-wrap: wrap; // permet de revenir à la ligne si besoin
 
-  li{
+    }
+
+    li {
       flex: 1 1 auto; // permet à chaque item de s'adapter
       min-width: 0;
-   }
-   
-  a{
-    font-size: clamp(10px, 3vw, 14px); //  taille ajustée
-    
-    text-align: center;
-    word-wrap: break-word;
-  }
+    }
 
-}
+    a {
+      font-size: clamp(10px, 3vw, 14px); //  taille ajustée
+
+      text-align: center;
+      word-wrap: break-word;
+    }
+
+  }
 
   .intro {
     &_content {
@@ -656,7 +752,7 @@ nav {
     text-align: center;
   }
 
-  
+
   .projets {
     &_liste {
       grid-template-columns: 1fr;
@@ -670,9 +766,9 @@ nav {
       padding: 10px;
       background-color: $cards-color;
     }
-    
-    &_img-fond {  
-      background-size:contain;
+
+    &_img-fond {
+      background-size: contain;
     }
 
     &_txt {
@@ -683,7 +779,7 @@ nav {
       }
     }
   }
-  
+
 
   .compétences {
     background-color: rgb(235, 235, 235);
@@ -705,7 +801,7 @@ nav {
     &_txt {
       align-items: center;
       text-align: center;
-      font-size:22px;
+      font-size: 22px;
     }
   }
 }
