@@ -1,3 +1,5 @@
+import { projectData } from './data.js';
+
 // Gère le survol des liens du menu
 function setHover() {
   const links = document.querySelectorAll("nav li a");
@@ -67,6 +69,25 @@ function handleModal() {
   cards.forEach(card => {
     card.addEventListener("click", e => {
       e.preventDefault();
+      const projectId = card.dataset.id;
+      const project = projectData.find(p => p.id === projectId);
+      if (!project) return;
+
+      // Remplir le contenu de la modale
+      modal.querySelector(".modal_description").textContent = project.description;
+
+      const problemList = modal.querySelector(".modal_problem-list");
+      problemList.innerHTML = "";
+      project.problems.forEach(problem => {
+        const li = document.createElement("li");
+        li.textContent = problem;
+        problemList.appendChild(li);
+      });
+      document.querySelector(".modal_title").textContent = project.title;
+      modal.querySelector(".modal_skills").textContent = project.skills;
+      modal.querySelector(".modal_github").href = project.github;
+      modal.querySelector(".modal_site").href = project.site;
+
       modal.classList.add("active");
     });
   });
@@ -85,5 +106,6 @@ document.addEventListener("DOMContentLoaded", () => {
   setHover();
   setScroll();
   setZoom();
+  
   handleModal();
 });

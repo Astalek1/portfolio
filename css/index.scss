@@ -282,7 +282,7 @@ nav {
 
   li {
     a {
-      display: inline-block; // 👈 nécessaire pour que transform fonctionne proprement
+      display: inline-block; 
       text-decoration: none;
       color: $primary-color;
       font-weight: bold;
@@ -488,29 +488,40 @@ nav {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     position: relative;
   }
+  &_title {
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: black;
+    text-align: center;
+  }
 
   &_description {
     font-size: 18px;
     margin-bottom: 20px;
+ 
   }
 
   &_problem-list {
-    margin-bottom: 20px;
+    margin-bottom: 50px;
     padding-left: 20px;
 
     li {
       margin-bottom: 8px;
       list-style: disc;
+      font-size: 18px;
+      font-family: "Open Sans", sans-serif;
     }
   }
 
   &_skills {
-    font-weight: normal;
+    font-weight: bold;
   }
 
   &_buttons {
-    margin-top: 20px;
+    margin-top: 50px;
     display: flex;
+    justify-content: end;
     gap: 15px;
 
     a {
@@ -523,7 +534,8 @@ nav {
       transition: background-color 0.3s;
 
       &:hover {
-        background-color: grey;
+        transform :scale(1.08);
+        transition: transform 0.2s ease;
       }
     }
   }
@@ -713,8 +725,7 @@ nav {
     }
 
     a {
-      font-size: clamp(10px, 3vw, 14px); //  taille ajustée
-
+      font-size: clamp(10px, 3vw, 14px); 
       text-align: center;
       word-wrap: break-word;
     }
