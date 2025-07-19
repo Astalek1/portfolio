@@ -101,11 +101,29 @@ function handleModal() {
   });
 }
 
+// Gère le menu burger
+
+function handleBurgerMenu() {
+  const burger = document.querySelector(".nav_burger");
+  const menu = document.querySelector("nav ul");
+
+  burger.addEventListener("click", (e) => {
+    e.stopPropagation(); // empêche la fermeture immédiate
+    menu.classList.toggle("open");
+  });
+
+  document.addEventListener("click", (e) => {
+    if (!menu.contains(e.target)) {
+      menu.classList.remove("open");
+    }
+  });
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
   setHover();
   setScroll();
   setZoom();
-  
   handleModal();
+  handleBurgerMenu();
 });

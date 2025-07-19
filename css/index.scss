@@ -265,7 +265,6 @@ nav {
   padding: 10px;
   background-color: $secondary-color;
 
-
   img {
     width: 115px;
     height: 100px;
@@ -280,6 +279,7 @@ nav {
     gap: 20px;
 
   }
+}
 
   li {
     a {
@@ -301,7 +301,7 @@ nav {
       }
     }
   }
-}
+
 
 /************* intro ******************/
 .intro {
@@ -480,7 +480,7 @@ nav {
   }
 
   &_content {
-    background-color: white;
+    background-color:$primary-color;
     padding: 30px;
     border-radius: 12px;
     max-width: 800px;
@@ -493,7 +493,7 @@ nav {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 40px;
-    color: black;
+    color:$secondary-color;
     text-align: center;
   }
 
@@ -530,8 +530,8 @@ nav {
       border-radius: 6px;
       text-decoration: none;
       font-weight: bold;
-      background-color: black;
-      color: white;
+      background-color: $secondary-color;
+      color: $primary-color;
       transition: background-color 0.3s;
 
       &:hover {
@@ -553,8 +553,8 @@ nav {
     font-size: 18px;
 
     &:hover {
-      background-color: black;
-      color: white;
+      background-color: $secondary-color;
+      color: $primary-color;
     }
   }
 }
@@ -706,31 +706,61 @@ nav {
   }
 }
 
+
+/**************smartphone*********************/
+
 @media (max-width: 768px) {
 
-  nav {
+   nav {
+    position: relative;
+
+    .nav_burger {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: 20px;
+      font-size: 35px;
+      color: $primary-color;
+      z-index: 1001;
+      cursor: pointer;
+    }
+
     ul {
-      width: 55%;
-      margin: 0;
-      padding: 0;
-      gap: 0;
-      margin-left: auto;
+      display:none;
+      flex-direction: column;
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      background-color: rgba(0, 0, 0, 0.767);
+      border-radius: 8px;
+      padding: 25px;
+      z-index: 1000;
+      height: 300%; // toute la hauteur de l'écran
+      width: 60%; // largeur du menu, à ajuster selon ton goût
+      border:1px solid gray;
+      padding-top:60px;
+      gap:30px;
+      
+      &.open {
       display: flex;
-      flex-wrap: wrap; // permet de revenir à la ligne si besoin
-
     }
 
-    li {
-      flex: 1 1 auto; // permet à chaque item de s'adapter
-      min-width: 0;
+      li {
+        margin: 10px 0;
+        text-align: center;
+
+        a {
+          color: $primary-colors;
+          font-size:25px;
+
+        &:hover{
+        padding: 6px 25px;
+        }
+        }
+      }
     }
 
-    a {
-      font-size: clamp(10px, 3vw, 14px); 
-      text-align: center;
-      word-wrap: break-word;
-    }
-
+    
   }
 
   .intro {
