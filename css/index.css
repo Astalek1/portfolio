@@ -723,8 +723,9 @@ li a:hover {
     transition: border-color 0.3s ease;
   }
   .contact_txt {
-    align-items: center;
     text-align: center;
     font-size: 22px;
+    width: 50%;
+    margin-left:25%;
   }
 }/*# sourceMappingURL=index.css.map */

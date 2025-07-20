@@ -841,9 +841,10 @@ nav {
 
   .contact {
     &_txt {
-      align-items: center;
-      text-align: center;
-      font-size: 22px;
+    text-align: center;
+    font-size: 22px;
+    width: 50%;
+    margin-left:25%;
     }
   }
 }
