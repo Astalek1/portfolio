@@ -662,8 +662,8 @@ nav {
 
   .projets {
     &_liste {
-      padding: 20px;
-      gap: 10px;
+      padding: 30px;
+      gap: 20px;
 
       &_article {
         height: auto;
@@ -720,7 +720,7 @@ nav {
       right: 20px;
       top: 20px;
       font-size: 35px;
-      color: $primary-color;
+      color:$primary-color;
       z-index: 1001;
       cursor: pointer;
     }
@@ -750,7 +750,7 @@ nav {
         text-align: center;
 
         a {
-          color: $primary-colors;
+          color:white;
           font-size:25px;
 
         &:hover{
