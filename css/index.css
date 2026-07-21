@@ -101,7 +101,8 @@ button,
 [type=reset],
 [type=submit] {
   -webkit-appearance: button;
-  appearance: button;
+  -moz-appearance: button;
+       appearance: button;
 }
 
 button::-moz-focus-inner,
@@ -153,7 +154,8 @@ textarea {
 
 [type=search] {
   -webkit-appearance: textfield;
-  appearance: textfield;
+  -moz-appearance: textfield;
+       appearance: textfield;
   outline-offset: -2px;
 }
 
@@ -202,7 +204,6 @@ h4 {
   font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
-
 }
 
 h2 {
@@ -239,7 +240,7 @@ p {
   gap: 10px;
 }
 
-.projets_txt p {
+.projets__txt p {
   font-size: 18px !important;
   font-weight: 400;
 }
@@ -270,10 +271,15 @@ nav ul {
   margin-left: auto;
   padding: 0 5%;
   font-size: 20px;
-  gap: 20px;
+  gap: 15px;
+  width: 80%;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
 li a {
+  font-size: clamp(0.8rem, 1.5vw, 1.2rem);
   display: inline-block;
   text-decoration: none;
   color: white;
@@ -299,7 +305,7 @@ li a:hover {
   margin-bottom: 0;
   padding-top: 120px;
 }
-.intro_img {
+.intro__img {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -308,7 +314,7 @@ li a:hover {
   z-index: 1;
   opacity: 1;
 }
-.intro_content {
+.intro__content {
   width: 90%;
   margin-left: 1%;
   position: relative;
@@ -317,7 +323,7 @@ li a:hover {
   align-items: center;
   gap: 1rem;
 }
-.intro_img-profile {
+.intro__img--profile {
   width: clamp(80px, 20vw, 200px);
   height: auto;
   margin-top: 1%;
@@ -343,7 +349,7 @@ li a:hover {
 }
 
 /********** a propos ************/
-.a_propos-txt {
+.a_propos--txt {
   text-align: center;
   line-height: 1.5;
   padding: 0 20px;
@@ -356,7 +362,7 @@ li a:hover {
   position: relative;
   overflow: hidden;
 }
-.projets_img-fond {
+.projets__img--fond {
   background-image: url("../images/fond.webp");
   background-repeat: repeat-y;
   z-index: 0;
@@ -366,7 +372,7 @@ li a:hover {
   background-size: cover;
   background-position: center bottom;
 }
-.projets_liste {
+.projets__liste {
   position: relative;
   width: 100%;
   max-width: 1200px;
@@ -377,11 +383,12 @@ li a:hover {
   padding: 60px 40px;
   box-sizing: border-box;
 }
-.projets_article {
+.projets__article {
   border-radius: 12px;
   text-decoration: none;
   color: inherit;
   overflow: hidden;
+  gap: 10px;
   height: 380px;
   display: flex;
   flex-direction: column;
@@ -390,10 +397,10 @@ li a:hover {
   background-color: wheat;
   border: 1px solid black;
 }
-.projets_article:hover {
+.projets__article:hover {
   cursor: pointer;
 }
-.projets_article img {
+.projets__article img {
   height: 240px;
   width: 100%;
   -o-object-fit: cover;
@@ -403,11 +410,11 @@ li a:hover {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   background-color: rgba(0, 0, 0, 0.3);
 }
-.projets_article a {
+.projets__article a {
   text-decoration: none;
   color: inherit;
 }
-.projets_txt {
+.projets__txt {
   flex-grow: 1;
   margin-top: 20px;
   display: flex;
@@ -418,7 +425,7 @@ li a:hover {
   height: 110px;
   background-color: wheat;
 }
-.projets_txt p {
+.projets__txt p {
   margin: 0;
   font-size: 18px;
 }
@@ -439,7 +446,7 @@ li a:hover {
 .modal.active {
   display: flex;
 }
-.modal_content {
+.modal__content {
   background-color: white;
   padding: 30px;
   border-radius: 12px;
@@ -449,37 +456,37 @@ li a:hover {
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
   position: relative;
 }
-.modal_title {
+.modal__title {
   font-size: 40px;
   font-weight: bold;
   margin-bottom: 40px;
   color: black;
   text-align: center;
 }
-.modal_description {
+.modal__description {
   font-size: 18px;
   margin-bottom: 20px;
 }
-.modal_problem-list {
+.modal__problem-list {
   margin-bottom: 50px;
   padding-left: 20px;
 }
-.modal_problem-list li {
+.modal__problem-list li {
   margin-bottom: 8px;
   list-style: disc;
   font-size: 18px;
   font-family: "Open Sans", sans-serif;
 }
-.modal_skills {
+.modal__skills {
   font-weight: bold;
 }
-.modal_buttons {
+.modal__buttons {
   margin-top: 50px;
   display: flex;
   justify-content: end;
   gap: 15px;
 }
-.modal_buttons a {
+.modal__buttons a {
   padding: 10px 20px;
   border-radius: 6px;
   text-decoration: none;
@@ -488,11 +495,11 @@ li a:hover {
   color: white;
   transition: background-color 0.3s;
 }
-.modal_buttons a:hover {
+.modal__buttons a:hover {
   transform: scale(1.08);
   transition: transform 0.2s ease;
 }
-.modal_close {
+.modal__close {
   background: none;
   border: 2px solid black;
   padding: 8px 14px;
@@ -503,7 +510,7 @@ li a:hover {
   right: 15px;
   font-size: 18px;
 }
-.modal_close:hover {
+.modal__close:hover {
   background-color: black;
   color: white;
 }
@@ -515,13 +522,13 @@ li a:hover {
   justify-content: center;
   gap: 40px;
 }
-.compétences_container {
+.compétences__container {
   display: flex;
   padding: 60px 80px;
   gap: 60px;
   justify-content: center;
 }
-.compétences_articles {
+.compétences__articles {
   width: 300px;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
@@ -532,17 +539,17 @@ li a:hover {
   align-items: center;
   background-color: wheat;
 }
-.compétences_articles h3 {
+.compétences__articles h3 {
   text-align: center;
   margin-bottom: 30px;
 }
-.compétences_logos {
+.compétences__logos {
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 10px;
 }
-.compétences_logos-img img {
+.compétences__logos--img img {
   width: 100%;
   height: 100px;
   -o-object-fit: contain;
@@ -555,20 +562,20 @@ li a:hover {
   color: white;
   height: 250px;
 }
-.contact_titre {
+.contact__titre {
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100px;
 }
-.contact_txt {
+.contact__txt {
   font-size: 32px;
   margin-left: 2%;
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
-.contact_txt div {
+.contact__txt div {
   display: flex;
   align-items: center;
   gap: 12px;
@@ -576,13 +583,13 @@ li a:hover {
 
 /****************responsive*******************/
 @media (max-width: 1024px) {
-  .intro_content {
+  .intro__content {
     width: 70%;
     flex-direction: row;
     align-items: center;
     gap: 1rem;
   }
-  .intro_img-profile {
+  .intro__img--profile {
     width: clamp(80px, 18vw, 130px);
   }
   .intro h1 {
@@ -591,35 +598,35 @@ li a:hover {
   .intro h2 {
     font-size: 2rem;
   }
-  .projets_liste {
+  .projets__liste {
     padding: 30px;
     gap: 20px;
   }
-  .projets_liste_article {
+  .projets__liste__article {
     height: auto;
   }
-  .projets_img-fond {
+  .projets__img--fond {
     background-size: contain;
   }
-  .projets_txt {
+  .projets__txt {
     height: 90px;
   }
-  .projets_txt p {
+  .projets__txt p {
     font-size: 16px;
   }
-  .compétences_container {
+  .compétences__container {
     gap: 30px;
     flex-wrap: wrap;
     justify-content: center;
   }
-  .compétences_articles {
+  .compétences__articles {
     width: 200px;
     padding: 15px;
   }
-  .compétences_articles h3 {
+  .compétences__articles h3 {
     font-size: 22px;
   }
-  .compétences_articles .compétences_logos-img img {
+  .compétences__articles .compétences_logos-img img {
     height: 70px;
   }
 }
@@ -668,14 +675,14 @@ li a:hover {
   nav ul li a:hover {
     padding: 6px 25px;
   }
-  .intro_content {
+  .intro__content {
     flex-direction: column;
     align-items: center;
     text-align: center;
     width: 100%;
     margin-left: 0;
   }
-  .intro_img-profile {
+  .intro__img--profile {
     width: 130px;
     height: auto;
     margin-top: 10px;
@@ -692,40 +699,40 @@ li a:hover {
     justify-content: center;
     text-align: center;
   }
-  .projets_liste {
+  .projets__liste {
     grid-template-columns: 1fr;
     padding: 20px;
     position: relative;
     z-index: 1;
   }
-  .projets_article {
+  .projets__article {
     height: auto;
     padding: 10px;
     background-color: wheat;
   }
-  .projets_img-fond {
+  .projets__img--fond {
     background-size: contain;
   }
-  .projets_txt {
+  .projets__txt {
     margin-top: 10px;
   }
-  .projets_txt p {
+  .projets__txt p {
     font-size: 16px;
   }
   .compétences {
     background-color: rgb(235, 235, 235);
   }
-  .compétences_container {
+  .compétences__container {
     flex-direction: column;
     align-items: center;
     padding: 20px;
   }
-  .compétences_articles {
+  .compétences__articles {
     width: 80%;
     border: 2px solid transparent;
     transition: border-color 0.3s ease;
   }
-  .contact_txt {
+  .contact__txt {
     text-align: center;
     font-size: 22px;
     width: 50%;

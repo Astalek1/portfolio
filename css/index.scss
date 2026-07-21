@@ -191,7 +191,6 @@ $cards-color: wheat;
 * {
   margin: 0;
   padding: 0;
-
 }
 
 h1 {
@@ -204,10 +203,9 @@ h1 {
 h2,
 h3,
 h4 {
-  font-family: 'Montserrat', sans-serif;
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   font-style: normal;
-  
 }
 
 h2 {
@@ -244,7 +242,7 @@ p {
   gap: 10px;
 }
 
-.projets_txt {
+.projets__txt {
   p {
     font-size: 18px !important;
     font-weight: 400;
@@ -279,32 +277,37 @@ nav {
     margin-left: auto;
     padding: 0 5%;
     font-size: 20px;
-    gap: 20px;
-
+    gap: 15px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
   }
 }
 
-  li {
-    a {
-      display: inline-block; 
-      text-decoration: none;
-      color: $primary-color;
-      font-weight: bold;
+li {
+  a {
+    font-size: clamp(0.8rem, 1.5vw, 1.2rem);
+    display: inline-block;
+    text-decoration: none;
+    color: $primary-color;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 6px;
+    transition:
+      transform 0.3s ease,
+      background-color 0.3s ease,
+      color 0.3s ease;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $secondary-color;
+      transform: scale(1.1);
       padding: 6px 12px;
       border-radius: 6px;
-      transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
-
-
-      &:hover {
-        background-color: $primary-color;
-        color: $secondary-color;
-        transform: scale(1.1);
-        padding: 6px 12px;
-        border-radius: 6px;
-      }
     }
   }
-
+}
 
 /************* intro ******************/
 .intro {
@@ -315,8 +318,7 @@ nav {
   margin-bottom: 0;
   padding-top: 120px;
 
-
-  &_img {
+  &__img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -325,7 +327,7 @@ nav {
     opacity: 1;
   }
 
-  &_content {
+  &__content {
     width: 90%;
     margin-left: 1%;
     position: relative;
@@ -333,10 +335,9 @@ nav {
     display: flex;
     align-items: center;
     gap: 1rem;
-
   }
 
-  &_img-profile {
+  &__img--profile {
     width: clamp(80px, 20vw, 200px);
     height: auto;
     margin-top: 1%;
@@ -376,14 +377,12 @@ nav {
 
 /********** a propos ************/
 
-.a_propos-txt {
+.a_propos--txt {
   text-align: center;
   line-height: 1.5;
   padding: 0 20px;
   margin: 15px auto 40px auto;
   max-width: 800px;
-  color:red;
-
 }
 
 /***************projets*************/
@@ -392,8 +391,8 @@ nav {
   position: relative;
   overflow: hidden;
 
-  &_img-fond {
-    background-image: url('../images/fond.webp');
+  &__img--fond {
+    background-image: url("../images/fond.webp");
     background-repeat: repeat-y;
     z-index: 0;
     position: absolute;
@@ -403,7 +402,7 @@ nav {
     background-position: center bottom;
   }
 
-  &_liste {
+  &__liste {
     position: relative;
     width: 100%;
     max-width: 1200px;
@@ -415,11 +414,12 @@ nav {
     box-sizing: border-box;
   }
 
-  &_article {
+  &__article {
     border-radius: 12px;
     text-decoration: none;
     color: inherit;
     overflow: hidden;
+    gap: 10px;
     height: 380px;
     display: flex;
     flex-direction: column;
@@ -428,10 +428,9 @@ nav {
     background-color: $cards-color;
     border: 1px solid black;
 
-    &:hover{
-      cursor:pointer;
+    &:hover {
+      cursor: pointer;
     }
-
 
     img {
       height: 240px;
@@ -440,7 +439,7 @@ nav {
       display: block;
       border-radius: 10px;
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-      background-color: rgba(0, 0, 0, 0.30);
+      background-color: rgba(0, 0, 0, 0.3);
     }
 
     a {
@@ -449,7 +448,7 @@ nav {
     }
   }
 
-  &_txt {
+  &__txt {
     flex-grow: 1;
     margin-top: 20px;
     display: flex;
@@ -484,8 +483,8 @@ nav {
     display: flex;
   }
 
-  &_content {
-    background-color:$primary-color;
+  &__content {
+    background-color: $primary-color;
     padding: 30px;
     border-radius: 12px;
     max-width: 800px;
@@ -494,21 +493,20 @@ nav {
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     position: relative;
   }
-  &_title {
+  &__title {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 40px;
-    color:$secondary-color;
+    color: $secondary-color;
     text-align: center;
   }
 
-  &_description {
+  &__description {
     font-size: 18px;
     margin-bottom: 20px;
- 
   }
 
-  &_problem-list {
+  &__problem-list {
     margin-bottom: 50px;
     padding-left: 20px;
 
@@ -520,11 +518,11 @@ nav {
     }
   }
 
-  &_skills {
+  &__skills {
     font-weight: bold;
   }
 
-  &_buttons {
+  &__buttons {
     margin-top: 50px;
     display: flex;
     justify-content: end;
@@ -540,13 +538,13 @@ nav {
       transition: background-color 0.3s;
 
       &:hover {
-        transform :scale(1.08);
+        transform: scale(1.08);
         transition: transform 0.2s ease;
       }
     }
   }
 
-  &_close {
+  &__close {
     background: none;
     border: 2px solid black;
     padding: 8px 14px;
@@ -564,7 +562,6 @@ nav {
   }
 }
 
-
 /***************** compétences ********************/
 
 .compétences {
@@ -573,14 +570,14 @@ nav {
   justify-content: center;
   gap: 40px;
 
-  &_container {
+  &__container {
     display: flex;
     padding: 60px 80px;
     gap: 60px;
     justify-content: center;
   }
 
-  &_articles {
+  &__articles {
     width: 300px;
     border-radius: 12px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
@@ -597,13 +594,13 @@ nav {
     }
   }
 
-  &_logos {
+  &__logos {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 10px;
 
-    &-img {
+    &--img {
       img {
         width: 100%;
         height: 100px;
@@ -620,14 +617,14 @@ nav {
   color: $primary-color;
   height: 250px;
 
-  &_titre {
+  &__titre {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100px;
   }
 
-  &_txt {
+  &__txt {
     font-size: 32px;
     margin-left: 2%;
     display: flex;
@@ -645,14 +642,14 @@ nav {
 /****************responsive*******************/
 @media (max-width: 1024px) {
   .intro {
-    &_content {
+    &__content {
       width: 70%;
       flex-direction: row;
       align-items: center;
       gap: 1rem;
     }
 
-    &_img-profile {
+    &__img--profile {
       width: clamp(80px, 18vw, 130px);
     }
 
@@ -666,21 +663,20 @@ nav {
   }
 
   .projets {
-    &_liste {
+    &__liste {
       padding: 30px;
       gap: 20px;
 
-      &_article {
+      &__article {
         height: auto;
       }
     }
 
-    &_img-fond {
+    &__img--fond {
       background-size: contain;
     }
 
-
-    &_txt {
+    &__txt {
       height: 90px;
 
       p {
@@ -690,13 +686,13 @@ nav {
   }
 
   .compétences {
-    &_container {
+    &__container {
       gap: 30px;
       flex-wrap: wrap;
       justify-content: center;
     }
 
-    &_articles {
+    &__articles {
       width: 200px;
       padding: 15px;
 
@@ -711,12 +707,10 @@ nav {
   }
 }
 
-
 /**************smartphone*********************/
 
 @media (max-width: 768px) {
-
-   nav {
+  nav {
     position: relative;
 
     .nav_burger {
@@ -725,13 +719,13 @@ nav {
       right: 20px;
       top: 20px;
       font-size: 35px;
-      color:$primary-color;
+      color: $primary-color;
       z-index: 1001;
       cursor: pointer;
     }
 
     ul {
-      display:none;
+      display: none;
       flex-direction: column;
       position: absolute;
       top: 10px;
@@ -742,34 +736,32 @@ nav {
       z-index: 1000;
       height: 300%; // toute la hauteur de l'écran
       width: 60%; // largeur du menu, à ajuster selon ton goût
-      border:1px solid gray;
-      padding-top:60px;
-      gap:30px;
-      
+      border: 1px solid gray;
+      padding-top: 60px;
+      gap: 30px;
+
       &.open {
-      display: flex;
-    }
+        display: flex;
+      }
 
       li {
         margin: 10px 0;
         text-align: center;
 
         a {
-          color:white;
-          font-size:25px;
+          color: white;
+          font-size: 25px;
 
-        &:hover{
-        padding: 6px 25px;
-        }
+          &:hover {
+            padding: 6px 25px;
+          }
         }
       }
     }
-
-    
   }
 
   .intro {
-    &_content {
+    &__content {
       flex-direction: column;
       align-items: center;
       text-align: center;
@@ -777,7 +769,7 @@ nav {
       margin-left: 0;
     }
 
-    &_img-profile {
+    &__img--profile {
       width: 130px;
       height: auto;
       margin-top: 10px;
@@ -799,26 +791,25 @@ nav {
     text-align: center;
   }
 
-
   .projets {
-    &_liste {
+    &__liste {
       grid-template-columns: 1fr;
       padding: 20px;
       position: relative;
       z-index: 1;
     }
 
-    &_article {
+    &__article {
       height: auto;
       padding: 10px;
       background-color: $cards-color;
     }
 
-    &_img-fond {
+    &__img--fond {
       background-size: contain;
     }
 
-    &_txt {
+    &__txt {
       margin-top: 10px;
 
       p {
@@ -827,17 +818,16 @@ nav {
     }
   }
 
-
   .compétences {
     background-color: rgb(235, 235, 235);
 
-    &_container {
+    &__container {
       flex-direction: column;
       align-items: center;
       padding: 20px;
     }
 
-    &_articles {
+    &__articles {
       width: 80%;
       border: 2px solid transparent;
       transition: border-color 0.3s ease;
@@ -845,11 +835,11 @@ nav {
   }
 
   .contact {
-    &_txt {
-    text-align: center;
-    font-size: 22px;
-    width: 50%;
-    margin-left:25%;
+    &__txt {
+      text-align: center;
+      font-size: 22px;
+      width: 50%;
+      margin-left: 25%;
     }
   }
 }

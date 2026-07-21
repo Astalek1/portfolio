@@ -1,192 +1,338 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Portfolio</title>
-        <meta name="description" content="Portfolio de Kévin Goujon, développeur web front-end et back-end spécialisé en React, Node.js et MongoDB">
-        <link rel="stylesheet" href="./css/index.css">
-        <link rel="icon" type="image/webp" href="./images/icone.webp"> 
-        <script src="https://kit.fontawesome.com/7576a75a6a.js" crossorigin="anonymous" defer></script>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
-        <script  type="module" src="./Javascript/script_mini.js"></script>
-        <script type="application/ld+json">
-            {
-            "@context": "https://schema.org",
-            "@type": "LocalBusiness",
-            "name": "Portfolio de Kévin Goujon",
-            "url": "https://ton-portfolio.fr",
-            "description": "Portfolio de Kévin Goujon, développeur web front-end et back-end spécialisé en React, Node.js et MongoDB.",
-            "inLanguage": "fr",
-            "address": {
-                "@type": "PostalAddress",
-                "addressLocality": "Rennes",
-                "addressCountry": "FR"
-            },
-            "author": {
-                "@type": "Person",
-                "name": "Kévin Goujon",
-                "url": "https://astalek1.github.io/portfolio/",
-                "image": "https://raw.githubusercontent.com/Astalek1/portfolio/main/images/kevin.webp",
-                "sameAs": [
-                "https://github.com/astalek1"
-                ],
-                "jobTitle": "Développeur Web",
-                "description": "Développeur web polyvalent, spécialisé en React, Node.js et MongoDB, disponible pour des opportunités professionnelles."
-            },
-            "contactPoint": {
-                "@type": "ContactPoint",
-                "contactType": "Personal",
-                "email": "kg-interactive@outlook.com",
-                "telephone": "+33618900616",
-                "availableLanguage": "Français"
-            }
-            }
-        </script>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio</title>
+    <meta
+      name="description"
+      content="Portfolio de Kévin Goujon, développeur web front-end et back-end spécialisé en React, Node.js et MongoDB"
+    />
+    <link rel="stylesheet" href="./css/index.css" />
+    <link rel="icon" type="image/webp" href="./images/icone.webp" />
+    <script src="https://kit.fontawesome.com/7576a75a6a.js" crossorigin="anonymous" defer></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap"
+      rel="stylesheet"
+    />
+    <script type="module" src="./Javascript/script_mini.js"></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Portfolio de Kévin Goujon",
+        "url": "https://ton-portfolio.fr",
+        "description": "Portfolio de Kévin Goujon, développeur web front-end et back-end spécialisé en React, Node.js et MongoDB.",
+        "inLanguage": "fr",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rennes",
+          "addressCountry": "FR"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Kévin Goujon",
+          "url": "https://astalek1.github.io/portfolio/",
+          "image": "https://raw.githubusercontent.com/Astalek1/portfolio/main/images/kevin.webp",
+          "sameAs": ["https://github.com/astalek1"],
+          "jobTitle": "Développeur Web",
+          "description": "Développeur web polyvalent, spécialisé en React, Node.js et MongoDB, disponible pour des opportunités professionnelles."
+        },
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "contactType": "Personal",
+          "email": "kg-interactive@outlook.com",
+          "telephone": "+33618900616",
+          "availableLanguage": "Français"
+        }
+      }
+    </script>
 
-        <meta property="og:title" content="Kévin Goujon - Développeur Web">
-        <meta property="og:description" content="Portfolio de Kévin Goujon, développeur front-end et back-end (React, Node.js, MongoDB).">
-        <meta property="og:image" content="https://raw.githubusercontent.com/Astalek1/portfolio/main/images/kevin.webp">
-        <meta property="og:url" content="https://astalek1.github.io/portfolio/">
-        <meta property="og:type" content="website">
-    </head>
-    <body>
-        <header>
-            <nav>
-                <img src="./images/logos/logo.webp" alt="logo de kévin gopujon">
-                <i class="fa-solid fa-bars nav_burger"></i>
-            <ul>
-                <li><a href="#ancre-a_propos">A propos</a></li>
-                <li><a href="#ancre-projets">Projets</a></li>
-                <li><a href="#ancre-compétences">Compétences</a></li>
-                <li><a href="#ancre-contact">Contact</a></li>
-            </ul>
-            </nav>
-        </header>
-        <main>
-            <section class="intro"  id="ancre-a_propos">
-                <img src="images/fond.webp" alt="image de fond" class="intro_img">
-                <div class="intro_content">
-                    <img src ="images/profile.webp" alt="photo de profile de kévin Goujon" class="intro_img-profile">
-                    <div class ="intro_txt">
-                        <h1>Kévin Goujon</h1>
-                        <h2>développeur web</h2>
-                    </div>
-                </div>
-            </section>
-            <section class="a_propos">
-                <div class="titre">
-                    <h2>A propos</h2>
-                </div>
-                <div class="a_propos-txt">
-                    <p>Anciennement technicien de maintenance en informatique, puis technicien configurateur système dans le domaine des télécommunications, j'ai décidé de m'orienter vers le développement informatique.<br>
-                    <br>Je travaille aussi bien avec HTML, CSS et JavaScript
-                    <br> que dans un environement React avec vite pour le front-end.
-                    <br>J'utilise aussi Node.js et MongoDB côté back-end.<br>
-                    <br>Que ce soit pour déboguer un site ou bien partir sur un tout nouveau projet, je suis à votre entière disposition.</p>
-                </div>
-            </section>
-            <section class="projets" id="ancre-projets">
-                <div class="titre">
-                    <h2>Projets</h2>
-                    <p>cliquez sur une carte pour voir les détails du projet</p>
-                </div>
-                  <div class="projets_img-fond"></div>
-                <div class="projets_liste">
-                    <article class="projets_article" data-id ="booki">
-                        <img src="./images/projet/booki.webp" alt="image du site de booki">
-                        <div class="projets_txt">
-                            <h3>Booki</h3>
-                            <p>gestion du front end en HTML/CSS</p>
-                        </div>
-                    </article>
-                     <article class="projets_article" data-id="Sophie-bluel">
-                        <img src="./images/projet/sophie_bluel.webp" alt="image du site de Sophie Bluel">
-                        <div class="projets_txt">
-                            <h3>Sophie Bluel</h3>
-                            <p>gestion du front end avec JavaScript</p>
-                        </div>
-                    </article>
-                    <article class="projets_article" data-id="Nina-carducci">
-                        <img src="./images/projet/nina_carducci.webp" alt="image du site de Nina Carducci">
-                        <div class="projets_txt">
-                            <h3>Nina Carducci</h3>
-                            <p>débogage du site</p>
-                        </div>
-                    </article>
-                    <article class="projets_article" data-id ="Kasa">
-                        <img src="./images/projet/kasa.webp" alt="image du site de kasa">
-                        <div class="projets_txt">
-                            <h3>Kasa</h3>
-                            <p>gestion du front end avec React</p>
-                        </div>
-                    </article>
-                    <article class="projets_article" data-id="Mon-vieux-grimoire">
-                        <img src="./images/projet/Mon_vieux_grimoire.webp" alt="image du site Mon vieux grimoire">
-                        <div class="projets_txt">
-                            <h3>Mon vieux grimoire</h3>
-                            <p>gestion du back end avec node.js et MongoDB</p>
-                        </div> 
-                    </article>
-                </div>
-            </section>
-            <section class="compétences" id="ancre-compétences">
-                <div class="titre">
-                    <h2>Compétences</h2>
-                </div>
-                <div class="compétences_container">
-                    <article class="compétences_articles">
-                        <h3>front-end</h3>
-                     
-                        <div class="compétences_logos">
-                            <div class="compétences_logos-img"><img src="./images/logos/react.webp" alt="logo de React"></div>
-                            <div class="compétences_logos-img"><img src="./images/logos/HTML5.webp" alt="logo HTML5"></div>
-                            <div class="compétences_logos-img"><img src="./images/logos/CSS.webp" alt="logo CSS"></div>
-                            <div class="compétences_logos-img"><img src="./images/logos/javascript.webp" alt="logo de Javascript"></div>
-                        </div>
-                    </article>
-                    <article class="compétences_articles">
-                        <h3>back-end</h3>
-                        <div class="compétences_logos">
-                            <div class="compétences_logos-img"><img src="./images/logos/nodejs.webp" alt="logo de nodejs"></div>
-                            <div class="compétences_logos-img"><img src="./images/logos/mongodb.webp" alt="logo mongoDB"></div>
-                        </div>
-                    </article>
-                    <article class="compétences_articles">
-                        <h3>Outils</h3>
-                        <div class="compétences_logos">
-                            <div class="compétences_logos-img"><img src="./images/logos/Vite.webp" alt="logo de Vite"></div>
-                            <div class="compétences_logos-img"><img src="./images/logos/git.webp" alt="logo de Git"></div>
-                            <div class="compétences_logos-img"><img src="./images/logos/github.webp" alt="logo de GitHub"></div>
-                            <div class="compétences_logos-img"><img src="./images/logos/VScode.webp" alt="logo de VScode"></div>
-                        </div>
-                    </article>
-                </div>
-            </section>
-        </main>
-        <footer class="contact" id="ancre-contact">
-            <div class="contact_titre">
-                <h2>Contact</h2>
-            </div>
-            <div class="contact_txt">
-                <div><i class="fa-solid fa-phone"></i><span>06 18 90 06 16</span></div>
-                <div><i class="fa-solid fa-envelope"></i> <span>kg-interactive@outlook.com</span></div>
-            </div>
-        </footer>
-        <div class="modal" id="project-modal"> 
-            <div class="modal_content">
-                <h2 class="modal_title">Titre du projet</h2>
-                <p class="modal_description"></p>
-                <ul class="modal_problem-list"></ul>
-                <p><strong>Compétences développées :</strong> <span class="modal_skills"></span></p>
-                <div class="modal_buttons">
-                <a href="#" target="_blank" class="modal_github">GitHub</a>
-                <a href="#" target="_blank" class="modal_site">Voir le site</a>
-                </div>
-                <button class="modal_close">✕</button>
-            </div>
+    <meta property="og:title" content="Kévin Goujon - Développeur Web" />
+    <meta
+      property="og:description"
+      content="Portfolio de Kévin Goujon, développeur front-end et back-end (React, Node.js, MongoDB)."
+    />
+    <meta
+      property="og:image"
+      content="https://raw.githubusercontent.com/Astalek1/portfolio/main/images/kevin.webp"
+    />
+    <meta property="og:url" content="https://astalek1.github.io/portfolio/" />
+    <meta property="og:type" content="website" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="./images/logos/logo.webp" alt="logo de kévin gopujon" />
+        <i class="fa-solid fa-bars nav_burger"></i>
+        <ul>
+          <li><a href="#ancre-a_propos">A propos</a></li>
+          <li><a href="#ancre-projets">Projets</a></li>
+          <li><a href="#ancre-services">Services</a></li>
+          <li><a href="#ancre-compétences">Compétences</a></li>
+          <li><a>FAQ</a></li>
+          <li><a href="#ancre-contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="intro" id="ancre-a_propos">
+        <img src="images/fond.webp" alt="image de fond" class="intro__img" />
+        <div class="intro__content">
+          <img
+            src="images/profile.webp"
+            alt="photo de profile de kévin Goujon"
+            class="intro__img--profile"
+          />
+          <div class="intro_txt">
+            <h1>Kévin Goujon</h1>
+            <h2>développeur web</h2>
+          </div>
         </div>
-    </body>
+      </section>
+      <section class="a_propos">
+        <div class="titre">
+          <h2>A propos</h2>
+        </div>
+        <div class="a_propos--txt">
+          <p>
+            Anciennement technicien de maintenance en informatique, puis technicien configurateur
+            système dans le domaine des télécommunications, j'ai décidé de m'orienter vers le
+            développement informatique.<br />
+            <br />Je travaille aussi bien avec HTML, CSS et JavaScript <br />
+            que dans un environement React avec vite pour le front-end. <br />J'utilise aussi
+            Node.js et MongoDB côté back-end.<br />
+            <br />Que ce soit pour déboguer un site ou bien partir sur un tout nouveau projet, je
+            suis à votre entière disposition.
+          </p>
+        </div>
+      </section>
+      <section class="projets" id="ancre-projets">
+        <div class="titre">
+          <h2>Projets</h2>
+          <p>cliquez sur une carte pour voir les détails du projet</p>
+        </div>
+        <div class="projets__img--fond"></div>
+        <div class="projets__liste">
+          <article class="projets__article" data-id="booki">
+            <img src="./images/projet/booki.webp" alt="image du site de booki" />
+            <div class="projets__txt">
+              <h3>Booki</h3>
+              <p>gestion du front end en HTML/CSS</p>
+            </div>
+          </article>
+          <article class="projets__article" data-id="Sophie-bluel">
+            <img src="./images/projet/sophie_bluel.webp" alt="image du site de Sophie Bluel" />
+            <div class="projets__txt">
+              <h3>Sophie Bluel</h3>
+              <p>gestion du front end avec JavaScript</p>
+            </div>
+          </article>
+          <article class="projets__article" data-id="Nina-carducci">
+            <img src="./images/projet/nina_carducci.webp" alt="image du site de Nina Carducci" />
+            <div class="projets_txt">
+              <h3>Nina Carducci</h3>
+              <p>débogage du site</p>
+            </div>
+          </article>
+          <article class="projets__article" data-id="Kasa">
+            <img src="./images/projet/kasa.webp" alt="image du site de kasa" />
+            <div class="projets__txt">
+              <h3>Kasa</h3>
+              <p>gestion du front end avec React</p>
+            </div>
+          </article>
+          <article class="projets__article" data-id="Mon-vieux-grimoire">
+            <img
+              src="./images/projet/Mon_vieux_grimoire.webp"
+              alt="image du site Mon vieux grimoire"
+            />
+            <div class="projets__txt">
+              <h3>Mon vieux grimoire</h3>
+              <p>gestion du back end avec node.js et MongoDB</p>
+            </div>
+          </article>
+        </div>
+      </section>
+      <section class="services" id="ancre-services">
+        <div class="titre">
+          <h2>Services</h2>
+          <p>Voici mes différentes prestations et forfaits proposés.</p>
+        </div>
+        <div class="services__liste">
+          <section class="services__prestations">
+            <h3 class="services__titre">Prestations</h3>
+            <article class="services__article">
+              <h4 class="services__article--titre">Prestation entreprise</h4>
+              <p class="services__article--txt">
+                TJM Développeur front-end (HTML, CSS, JavaScript, React) : 400 €/jour
+              </p>
+            </article>
+
+            <article class="services__article">
+              <h4 class="services__article--titre">Débogage de site — 50 €/h (sur devis)</h4>
+              <p class="services__article--txt">
+                Analyse et correction des bugs, optimisation des performances et du référencement
+                naturel (SEO)<br />
+                - Analyse du problème<br />
+                - Estimation du temps d'intervention<br />
+                - Devis avant toute correction<br /><br />
+
+                * Toute estimation est donnée à titre indicatif. <br />Si le temps de correction
+                estimé est dépassé en raison d'une complexité imprévue, <br />le client est informé
+                et son accord est demandé avant toute intervention complémentaire.
+              </p>
+            </article>
+          </section>
+          <section class="services__forfaits">
+            <h3 class="services__titre">Forfaits</h3>
+            <article class="services__article">
+              <h4 class="services__article--titre">Page unique : 300 €</h4>
+              <p class="services__article--txt">
+                Maquette incluse (Valeur : 50 €) * <br />
+                Maintenance incluse (1 mois) *<br />
+                Délais estimés : 1 semaine*
+              </p>
+            </article>
+            <article class="services__article">
+              <h4 class="services__article--titre">Site vitrine : 700 €</h4>
+              <p class="services__article--txt">
+                Jusqu’à 6 pages<br />
+                Maquette incluse (Valeur : 200 €) *<br />
+                Interface d'administration<br />
+                Maintenance incluse (3 mois) *<br />
+                Délais estimés : 2 à 4 mois*
+              </p>
+            </article>
+
+            <article class="services__article">
+              <h4 class="services__article--titre">Site Pro : 1 200 €</h4>
+              <p class="services__article--txt">
+                Jusqu’à 4 pages <br />
+                Maquette incluse (Valeur : 100 €) *<br />
+                Maintenance incluse (2 mois) *<br />
+                Délais estimés : 2 à 4 semaines*
+              </p>
+            </article>
+
+            <article class="services__article">
+              <h4 class="services__article--titre">Site e-commerce : sur devis</h4>
+              <p class="services__article--txt">
+                Maquette incluse (Valeur : 400 €) *<br />
+                Le devis est établi selon les fonctionnalités demandées. <br />Calculé sur la base
+                du temps de développement estimé (TJM : 400 €/jour)<br />
+                Maintenance incluse (6 mois) *<br />
+                Délais estimés : selon le devis * <br />
+                Possibilité de paiement échelonné selon le montant du devis.
+              </p>
+            </article>
+          </section>
+          <section class="services__forfaits--infos">
+            <p>* Maintenance hors forfait : 30 €/heure</p>
+            <p>
+              * Les délais indiqués sont donnés à titre estimatif et n'entraînent aucun supplément
+              forfaitaire en cas de dépassement.
+            </p>
+            <p>
+              * Un acompte équivalent au prix de la maquette ou de 20 % du montant total pour les
+              projets sans maquette est demandé pour engager le projet.
+            </p>
+            <p>
+              * L'acompte correspondant au montant de la maquette reste acquis dès le début de sa
+              réalisation, même en cas d'annulation du projet.
+            </p>
+            <p>
+              * Tous les forfaits comprennent : le référencement naturel (SEO) de base,
+              l’accessibilité, le responsive (ordinateur, tablette, téléphone), la mise en ligne.
+            </p>
+            <p>
+              * L'hébergement, le nom de domaine et les éventuels services tiers sont à la charge du
+              client. Je vous accompagnerai dans leur choix en fonction de vos besoins.
+            </p>
+            <p>
+              * Les textes, images, logos et autres contenus sont fournis par le client, sauf
+              mention contraire dans le devis.
+            </p>
+          </section>
+        </div>
+      </section>
+      <section class="compétences" id="ancre-compétences">
+        <div class="titre">
+          <h2>Compétences</h2>
+        </div>
+        <div class="compétences__container">
+          <article class="compétences__articles">
+            <h3>front-end</h3>
+
+            <div class="compétences_logos">
+              <div class="compétences__logos--img">
+                <img src="./images/logos/react.webp" alt="logo de React" />
+              </div>
+              <div class="compétences__logos--img">
+                <img src="./images/logos/HTML5.webp" alt="logo HTML5" />
+              </div>
+              <div class="compétences__logos--img">
+                <img src="./images/logos/CSS.webp" alt="logo CSS" />
+              </div>
+              <div class="compétences__logos--img">
+                <img src="./images/logos/javascript.webp" alt="logo de Javascript" />
+              </div>
+            </div>
+          </article>
+          <article class="compétences__articles">
+            <h3>back-end</h3>
+            <div class="compétences__logos">
+              <div class="compétences__logos--img">
+                <img src="./images/logos/nodejs.webp" alt="logo de nodejs" />
+              </div>
+              <div class="compétences__logos--img">
+                <img src="./images/logos/mongodb.webp" alt="logo mongoDB" />
+              </div>
+            </div>
+          </article>
+          <article class="compétences__articles">
+            <h3>Outils</h3>
+            <div class="compétences__logos">
+              <div class="compétences__logos--img">
+                <img src="./images/logos/Vite.webp" alt="logo de Vite" />
+              </div>
+              <div class="compétences__logos--img">
+                <img src="./images/logos/git.webp" alt="logo de Git" />
+              </div>
+              <div class="compétences__logos--img">
+                <img src="./images/logos/github.webp" alt="logo de GitHub" />
+              </div>
+              <div class="compétences__logos--img">
+                <img src="./images/logos/VScode.webp" alt="logo de VScode" />
+              </div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer class="contact" id="ancre-contact">
+      <div class="contact__titre">
+        <h2>Contact</h2>
+      </div>
+      <div class="contact__txt">
+        <div><i class="fa-solid fa-phone"></i><span>06 18 90 06 16</span></div>
+        <div><i class="fa-solid fa-envelope"></i> <span>kg-interactive@outlook.com</span></div>
+      </div>
+    </footer>
+    <div class="modal" id="project-modal">
+      <div class="modal__content">
+        <h2 class="modal__title">Titre du projet</h2>
+        <p class="modal__description"></p>
+        <ul class="modal__problem--list"></ul>
+        <p><strong>Compétences développées :</strong> <span class="modal__skills"></span></p>
+        <div class="modal__buttons">
+          <a href="#" target="_blank" class="modal__github">GitHub</a>
+          <a href="#" target="_blank" class="modal__site">Voir le site</a>
+        </div>
+        <button class="modal__close">✕</button>
+      </div>
+    </div>
+  </body>
 </html>
