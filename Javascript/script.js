@@ -1,4 +1,4 @@
-import { projectData } from './data.js';
+import { projectData } from "./data.js";
 
 // Gère le survol des liens du menu
 function setHover() {
@@ -6,11 +6,11 @@ function setHover() {
 
   links.forEach((link) => {
     link.addEventListener("mouseenter", () => {
-      link.classList.add("nav-hover");
+      link.classList.add("nav--hover");
     });
 
     link.addEventListener("mouseleave", () => {
-      link.classList.remove("nav-hover");
+      link.classList.remove("nav--hover");
     });
   });
 }
@@ -27,10 +27,7 @@ function setScroll() {
       const target = document.querySelector(id);
 
       if (target) {
-        const offset =
-          target.getBoundingClientRect().top +
-          window.scrollY -
-          header.offsetHeight;
+        const offset = target.getBoundingClientRect().top + window.scrollY - header.offsetHeight;
 
         window.scrollTo({
           top: offset,
@@ -43,7 +40,7 @@ function setScroll() {
 
 // Gère le zoom sur les cartes projets
 function setZoom() {
-  const cards = document.querySelectorAll(".projets_article");
+  const cards = document.querySelectorAll(".projets__article");
 
   cards.forEach((card) => {
     card.addEventListener("mouseenter", () => {
@@ -63,30 +60,30 @@ function setZoom() {
 
 function handleModal() {
   const modal = document.getElementById("project-modal");
-  const closeBtn = document.querySelector(".modal_close");
-  const cards = document.querySelectorAll(".projets_article");
+  const closeBtn = document.querySelector(".modal__close");
+  const cards = document.querySelectorAll(".projets__article");
 
-  cards.forEach(card => {
-    card.addEventListener("click", e => {
+  cards.forEach((card) => {
+    card.addEventListener("click", (e) => {
       e.preventDefault();
       const projectId = card.dataset.id;
-      const project = projectData.find(p => p.id === projectId);
+      const project = projectData.find((p) => p.id === projectId);
       if (!project) return;
 
       // Remplir le contenu de la modale
-      modal.querySelector(".modal_description").textContent = project.description;
+      modal.querySelector(".modal__description").textContent = project.description;
 
-      const problemList = modal.querySelector(".modal_problem-list");
+      const problemList = modal.querySelector(".modal__problem--list");
       problemList.innerHTML = "";
-      project.problems.forEach(problem => {
+      project.problems.forEach((problem) => {
         const li = document.createElement("li");
         li.textContent = problem;
         problemList.appendChild(li);
       });
-      document.querySelector(".modal_title").textContent = project.title;
-      modal.querySelector(".modal_skills").textContent = project.skills;
-      modal.querySelector(".modal_github").href = project.github;
-      modal.querySelector(".modal_site").href = project.site;
+      document.querySelector(".modal__title").textContent = project.title;
+      modal.querySelector(".modal__skills").textContent = project.skills;
+      modal.querySelector(".modal__github").href = project.github;
+      modal.querySelector(".modal__site").href = project.site;
 
       modal.classList.add("active");
     });
@@ -94,7 +91,7 @@ function handleModal() {
 
   closeBtn.addEventListener("click", () => modal.classList.remove("active"));
 
-  modal.addEventListener("click", e => {
+  modal.addEventListener("click", (e) => {
     if (e.target === modal) {
       modal.classList.remove("active");
     }
@@ -104,7 +101,7 @@ function handleModal() {
 // Gère le menu burger
 
 function handleBurgerMenu() {
-  const burger = document.querySelector(".nav_burger");
+  const burger = document.querySelector(".nav__burger");
   const menu = document.querySelector("nav ul");
 
   burger.addEventListener("click", (e) => {
@@ -118,7 +115,6 @@ function handleBurgerMenu() {
     }
   });
 }
-
 
 document.addEventListener("DOMContentLoaded", () => {
   setHover();
