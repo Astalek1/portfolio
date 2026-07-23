@@ -393,6 +393,7 @@ li {
 .projets {
   position: relative;
   overflow: hidden;
+  z-index: 2;
 
   &__img--fond {
     background-image: url("../images/fond.webp");
@@ -401,7 +402,7 @@ li {
     position: absolute;
     width: 100%;
     height: 100%;
-    background-size: contain;
+    background-size: cover;
     background-position: center bottom;
   }
 
@@ -623,8 +624,8 @@ li {
     z-index: 0;
     position: absolute;
     width: 100%;
-    height: 200%;
-    background-size: contain;
+    height: 130%;
+    background-size: cover;
     background-position: center bottom;
   }
   &__titre {
@@ -659,10 +660,34 @@ li {
     background-color: $secondary-color;
     border: 1px solid white;
     margin: 30px;
-    width: 23%;
+    width: 35rem;
     height: auto;
     transition: transform 0.2s ease;
 
+    &--presta {
+      border-radius: 12px;
+      text-decoration: none;
+      color: inherit;
+      overflow: hidden;
+      gap: 20px;
+      display: flex;
+      flex-direction: column;
+      z-index: 3;
+      padding: 15px;
+      background-color: $secondary-color;
+      border: 1px solid white;
+      margin: 30px;
+      width: 35rem;
+      height: auto;
+      transition: transform 0.2s ease;
+      &:hover {
+        transform: scale(1.06);
+        transition: transform 0.2s ease;
+      }
+    }
+    &--titre {
+      margin-bottom: 5px;
+    }
     &--txt {
       font-size: 16px;
     }

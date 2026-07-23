@@ -364,6 +364,7 @@ li a:hover {
 .projets {
   position: relative;
   overflow: hidden;
+  z-index: 2;
 }
 .projets__img--fond {
   background-image: url("../images/fond.webp");
@@ -372,7 +373,7 @@ li a:hover {
   position: absolute;
   width: 100%;
   height: 100%;
-  background-size: contain;
+  background-size: cover;
   background-position: center bottom;
 }
 .projets__liste {
@@ -567,8 +568,8 @@ li a:hover {
   z-index: 0;
   position: absolute;
   width: 100%;
-  height: 200%;
-  background-size: contain;
+  height: 130%;
+  background-size: cover;
   background-position: center bottom;
 }
 .services__titre {
@@ -601,9 +602,33 @@ li a:hover {
   background-color: black;
   border: 1px solid white;
   margin: 30px;
-  width: 23%;
+  width: 35rem;
   height: auto;
   transition: transform 0.2s ease;
+}
+.services__article--presta {
+  border-radius: 12px;
+  text-decoration: none;
+  color: inherit;
+  overflow: hidden;
+  gap: 20px;
+  display: flex;
+  flex-direction: column;
+  z-index: 3;
+  padding: 15px;
+  background-color: black;
+  border: 1px solid white;
+  margin: 30px;
+  width: 35rem;
+  height: auto;
+  transition: transform 0.2s ease;
+}
+.services__article--presta:hover {
+  transform: scale(1.06);
+  transition: transform 0.2s ease;
+}
+.services__article--titre {
+  margin-bottom: 5px;
 }
 .services__article--txt {
   font-size: 16px;
