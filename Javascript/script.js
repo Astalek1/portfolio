@@ -101,7 +101,7 @@ function handleModal() {
 // Gère le menu burger
 
 function handleBurgerMenu() {
-  const burger = document.querySelector(".nav__burger");
+  const burger = document.querySelector(".nav_burger");
   const menu = document.querySelector("nav ul");
 
   burger.addEventListener("click", (e) => {

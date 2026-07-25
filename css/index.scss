@@ -219,6 +219,9 @@ h3 {
 h4 {
   font-size: 1.3rem;
 }
+p {
+  font-size: 1rem;
+}
 
 a,
 p,
@@ -226,10 +229,6 @@ p,
   font-family: "Open Sans", sans-serif;
   font-style: normal;
   font-variation-settings: "wdth" 100;
-  font-size: 20px;
-}
-
-p {
   font-size: 20px;
 }
 
@@ -434,6 +433,7 @@ li {
     padding: 15px;
     background-color: $cards-color;
     border: 1px solid black;
+    line-height: 24px;
 
     &:hover {
       cursor: pointer;
@@ -468,7 +468,6 @@ li {
 
     p {
       margin: 0;
-      font-size: 18px;
     }
   }
 }
@@ -513,14 +512,13 @@ li {
     margin-bottom: 20px;
   }
 
-  &__problem-list {
+  &__problem--list {
     margin-bottom: 50px;
     padding-left: 20px;
 
     li {
       margin-bottom: 8px;
       list-style: disc;
-      font-size: 18px;
       font-family: "Open Sans", sans-serif;
     }
   }
@@ -675,9 +673,8 @@ li {
     background-color: $primary-color;
     border: 1px solid black;
     margin: 30px;
-    width: 19rem;
+    width: 21rem;
     height: auto;
-
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 
     &--presta {
@@ -692,17 +689,14 @@ li {
       background-color: $primary-color;
       border: 1px solid black;
       margin: 30px;
-      width: 35rem;
+      width: 45rem;
       height: 100px;
-
       box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
     }
     &--titre {
       margin-bottom: 5px;
     }
-    &--txt {
-      font-size: 16px;
-    }
+
     &--info {
       font-size: 14px;
     }
@@ -723,9 +717,62 @@ li {
 
     p {
       margin: 10px;
-      font-size: 16px;
+
       padding: 5px;
     }
+  }
+}
+
+/****************** FAQ ***********************/
+
+.FAQ {
+  width: 100%;
+  height: auto;
+  background-color: $primary-color;
+
+  &__objet {
+    background-color: $cards-color;
+    width: min(900px, 90%);
+    margin: 0 auto;
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+
+    &--question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 1.3rem;
+      padding: 5px;
+
+      &::after {
+        content: "+";
+        float: right;
+        font-size: 2rem;
+
+        transition: transform 0.3s ease;
+      }
+      details[open] &:after {
+        content: "−";
+      }
+    }
+    &--reponse {
+      font-style: italic;
+      padding: 10px;
+      font-size: 1.1rem;
+      line-height: 24px;
+    }
+  }
+
+  summary {
+    list-style: none;
+    cursor: pointer;
+  }
+
+  summary::-webkit-details-marker {
+    display: none;
   }
 }
 
@@ -853,7 +900,7 @@ li {
       border-radius: 8px;
       padding: 25px;
       z-index: 1000;
-      height: 300%; // toute la hauteur de l'écran
+      height: 400%; // toute la hauteur de l'écran
       width: 60%; // largeur du menu, à ajuster selon ton goût
       border: 1px solid gray;
       padding-top: 60px;
