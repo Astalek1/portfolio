@@ -659,11 +659,25 @@ li a:hover {
 
 /****************** FAQ ***********************/
 .FAQ {
+  position: relative;
   width: 100%;
   height: auto;
   background-color: white;
 }
+.FAQ__img--fond {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../images/fond.webp");
+  background-repeat: repeat-y;
+  background-size: 100% auto;
+  background-position: center top;
+  z-index: 0;
+  background-position: center -1px;
+}
 .FAQ__objet {
+  position: relative;
+  z-index: 10;
   background-color: wheat;
   width: min(900px, 90%);
   margin: 0 auto;
@@ -705,6 +719,7 @@ details[open] .FAQ__objet--question:after {
 
 /***************** contact *****************/
 .contact {
+  position: relative;
   background-color: black;
   color: white;
   height: 250px;

@@ -726,11 +726,26 @@ li {
 /****************** FAQ ***********************/
 
 .FAQ {
+  position: relative;
   width: 100%;
   height: auto;
   background-color: $primary-color;
 
+  &__img--fond {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-image: url("../images/fond.webp");
+    background-repeat: repeat-y;
+    background-size: 100% auto;
+    background-position: center top;
+    z-index: 0;
+    background-position: center -1px;
+  }
+
   &__objet {
+    position: relative;
+    z-index: 10;
     background-color: $cards-color;
     width: min(900px, 90%);
     margin: 0 auto;
@@ -779,6 +794,7 @@ li {
 /***************** contact *****************/
 
 .contact {
+  position: relative;
   background-color: $secondary-color;
   color: $primary-color;
   height: 250px;
