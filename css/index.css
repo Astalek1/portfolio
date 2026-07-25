@@ -273,7 +273,6 @@ nav ul {
   list-style: none;
   margin-left: auto;
   padding: 0 5%;
-  font-size: 20px;
   gap: 15px;
   width: 80%;
   display: flex;
@@ -614,7 +613,7 @@ li a:hover {
   background-color: white;
   border: 1px solid black;
   margin: 30px;
-  width: 21rem;
+  width: 22rem;
   height: auto;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
@@ -630,7 +629,7 @@ li a:hover {
   background-color: white;
   border: 1px solid black;
   margin: 30px;
-  width: 45rem;
+  width: clamb(40rem, 45vh, 45rem);
   height: 100px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
 }
@@ -745,6 +744,9 @@ details[open] .FAQ__objet--question:after {
 
 /****************responsive*******************/
 @media (max-width: 1024px) {
+  li a {
+    padding: 6px 10px;
+  }
   .intro__content {
     width: 70%;
     flex-direction: row;
@@ -790,6 +792,9 @@ details[open] .FAQ__objet--question:after {
   }
   .compétences__articles .compétences_logos-img img {
     height: 70px;
+  }
+  .services__zone--presta {
+    flex-direction: column;
   }
 }
 /**************smartphone*********************/
@@ -893,6 +898,21 @@ details[open] .FAQ__objet--question:after {
     width: 80%;
     border: 2px solid transparent;
     transition: border-color 0.3s ease;
+  }
+  .services {
+    width: 100%;
+  }
+  .services__titre {
+    display: flex;
+    justify-content: center;
+  }
+  .services__zone--presta {
+    width: 105%;
+    align-items: center;
+  }
+  .services__article {
+    width: 90%;
+    margin: 10px 0;
   }
   .contact__txt {
     text-align: center;
