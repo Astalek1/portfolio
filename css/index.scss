@@ -701,6 +701,11 @@ li {
     &--info {
       font-size: 14px;
     }
+
+    &--txt span {
+      display: flex;
+      margin-top: 5px;
+    }
   }
 
   &__liste {
@@ -798,7 +803,7 @@ li {
   position: relative;
   background-color: $secondary-color;
   color: $primary-color;
-  height: 250px;
+  height: 280px;
 
   &__titre {
     display: flex;
@@ -808,11 +813,13 @@ li {
   }
 
   &__txt {
+    width: 50%;
     font-size: 32px;
     margin-left: 2%;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    padding-bottom: 20px;
 
     div {
       display: flex;
@@ -1053,7 +1060,7 @@ li {
     &__txt {
       text-align: center;
       font-size: 22px;
-      width: 50%;
+      width: 60%;
       margin-left: 25%;
     }
   }
